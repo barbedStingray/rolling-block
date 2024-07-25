@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <h1>Rolling Block</h1>
       <div className='grid'>
-        {ultimateShowdown.map((lyric) => (
-          <RollBox lyric={lyric} />
+        {ultimateShowdown.map((lyric, index) => (
+          <RollBox key={index} lyric={lyric} />
         ))}
       </div>
     </div>
