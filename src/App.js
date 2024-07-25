@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import RollBox from './RollBox';
 
 function App() {
+
+  const ultimateShowdown = ['this', 'is', 'the', 'ultimate', 'showdown', 'of', 'ultimate', 'destiny', 'only', 'one', 'will', 'survive', 'wonder', 'who', 'itll', 'be']
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Rolling Block</h1>
+      <div className='grid'>
+        {ultimateShowdown.map((lyric) => (
+          <RollBox lyric={lyric} />
+        ))}
+      </div>
     </div>
   );
 }
